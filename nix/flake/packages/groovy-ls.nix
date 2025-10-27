@@ -26,6 +26,9 @@ localFlake:
         gradleFlags = [ "--no-daemon" "--stacktrace" ];
 
         installPhase = ''
+          install -Dm644 build/libs/source.jar \
+            $out/share/java/groovy-language-server/groovy-language-server.jar
+
           install -Dm644 build/libs/source-all.jar \
             $out/share/java/groovy-language-server/groovy-language-server-all.jar
 
