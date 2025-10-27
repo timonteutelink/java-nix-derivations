@@ -1,3 +1,6 @@
 [submodule "submodules/groovy-language-server"]
 	path = submodules/groovy-language-server
 	url = https://github.com/GroovyLanguageServer/groovy-language-server
+[submodule "submodules/vscode-gradle"]
+	path = submodules/vscode-gradle
+	url = https://github.com/microsoft/vscode-gradle.git
