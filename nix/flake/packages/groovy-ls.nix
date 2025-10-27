@@ -22,10 +22,11 @@ localFlake:
         java = jdk;
 
         gradleBuildTask = "build";
+        gradleBuildFlags = [ "build" ];
+        gradleFlags = [ "--no-daemon" "--stacktrace" ];
 
         installPhase = ''
-          ls -la
-          install -Dm644 build/libs/groovy-language-server-all.jar \
+          install -Dm644 build/libs/source-all.jar \
             $out/share/java/groovy-language-server/groovy-language-server-all.jar
 
           makeWrapper ${pkgs.jre_headless}/bin/java $out/bin/groovy-language-server \
